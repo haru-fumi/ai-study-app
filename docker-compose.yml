@@ -1,0 +1,12 @@
+services:
+  study-app:
+    build: .
+    container_name: study-app
+    ports:
+      - "8080:5000"
+    volumes:
+      - study-data:/data
+    restart: unless-stopped
+
+volumes:
+  study-data:
